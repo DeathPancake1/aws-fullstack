@@ -11,14 +11,6 @@ jobs:
       - node/install
       - checkout
       - aws-cli/setup
-      - eb/deploy:
-          environment-name: udagram-api
-          filters:
-            branches:
-              only:
-                - circleci-project-setup
-          requires:
-            - node/checkout
       - run:
           name: Front-End Install
           command: |
