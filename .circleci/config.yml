@@ -17,7 +17,7 @@ jobs:
       - eb/setup
       - run:
           command: |
-            eb status
+            eb use Udagramapi-env
           name: You may now use the EB CLI within this job
       - run:
           name: Front-End Install
