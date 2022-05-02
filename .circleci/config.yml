@@ -29,10 +29,6 @@ jobs:
           command: |
             npm run backend:build
       - run:
-          name: Deploy Backend
-          command: |
-            npm run backend:deploy
-      - run:
           name: Install awscli
           command: |
             sudo pip install awsebcli --upgrade
@@ -41,3 +37,7 @@ jobs:
           command: |
              eb use Udagramapi-env --profile eb-cli
              eb deploy --profile eb-cli
+      - run:
+          name: Deploy Backend
+          command: |
+            npm run backend:deploy
